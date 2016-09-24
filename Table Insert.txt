@@ -1,0 +1,21 @@
+create table station(station_id int primary key,station_name varchar2(20));
+insert into station values(1,'shivaji nagar');
+insert into station values(2,'manipal center');
+insert into station values(3,'military accounts');
+insert into station values(4,'commando hospital');
+insert into station values(5,'domlur bus stop');
+insert into station values(6,'kodihalli');
+insert into station values(7,'NAL bus stop');
+insert into station values(8,'Murgeshpalya');
+insert into station values(9,'rajeshwari talkies');
+insert into station values(10,'hal main gate');
+insert into station values(11,'helicor division');
+insert into station values(12,'kalyanamandap');
+insert into station values(13,'borewell');
+insert into station values(14,'marathahalli');
+insert into station values(15,'marathahalli bridge');
+select * from station;
+
+
+
+create table ticket(tid int,stid int references station(station_id),destination_id int,no_of_passengers int,dat varchar2(10),gender varchar2(10),amount int,price int);
